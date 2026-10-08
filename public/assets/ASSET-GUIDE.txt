@@ -1,0 +1,2 @@
+Ganti file placeholder di folder images dengan asset asli dari Figma.
+Jangan ubah struktur folder agar path Blade tetap sederhana.
