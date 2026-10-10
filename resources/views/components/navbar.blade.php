@@ -4,11 +4,11 @@
             <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Komunitas Literasi Remaja">
         </a>
 
-        <button class="mobile-menu-button" type="button" aria-label="Buka menu" aria-expanded="false">
+        <button class="mobile-menu-button" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="primary-navigation">
             <span></span><span></span><span></span>
         </button>
 
-        <nav class="site-nav" aria-label="Navigasi utama">
+        <nav class="site-nav" id="primary-navigation" aria-label="Navigasi utama">
             <a class="{{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
             <a class="{{ request()->is('about') ? 'active' : '' }}" href="{{ url('/about') }}">About Us</a>
             <a href="#publication">Publication</a>

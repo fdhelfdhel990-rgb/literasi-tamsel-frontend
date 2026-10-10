@@ -5,7 +5,7 @@
     <div class="hero-overlay"></div>
     <div class="container hero-content">
         <h1>Komunitas Literasi<br>Remaja Tambun<br>Selatan</h1>
-        <p>Fokus komunitas adalah menyebarluaskan akses buku bacaan anak<br class="desktop-only">
+        <p>Fokus Kami adalah menyebarluaskan akses buku bacaan anak<br class="desktop-only">
             secara gratis untuk membantu meningkatkan literasi dan kepedulian<br class="desktop-only">
             generasi muda di sekitar kita.</p>
         <div class="hero-actions">
@@ -31,13 +31,19 @@
 <section class="section partner-section" id="media-partner">
     <div class="container">
         <h2>Media Partner</h2>
-        <div class="partner-row">
-            <button class="carousel-arrow" type="button" aria-label="Sebelumnya">‹</button>
-            <div class="partner-logo"><img src="{{ asset('assets/images/partners/kementrian.png') }}" alt="kementrian"></div>
-            <div class="partner-logo"><img src="{{ asset('assets/images/partners/ugm.png') }}" alt="ugm"></div>
-            <div class="partner-logo"><img src="{{ asset('assets/images/partners/bri-peduli.png') }}" alt="bri-peduli"></div>
-            <div class="partner-logo"><img src="{{ asset('assets/images/partners/kmtedi.png') }}" alt="kmtedi"></div>
-            <button class="carousel-arrow" type="button" aria-label="Berikutnya">›</button>
+        <div class="partner-carousel" data-partner-carousel role="region" aria-roledescription="carousel" aria-label="Logo media partner">
+            <button class="carousel-arrow" type="button" aria-label="Mitra sebelumnya" data-partner-direction="previous">‹</button>
+            <div class="partner-viewport" data-partner-viewport>
+                <div class="partner-track" data-partner-track>
+                    <div class="partner-set" data-partner-set>
+                        <div class="partner-logo"><img src="{{ asset('assets/images/partners/kementrian.jpg') }}" alt="Kementerian Pendidikan"></div>
+                        <div class="partner-logo"><img src="{{ asset('assets/images/partners/ugm.png') }}" alt="Universitas Gadjah Mada"></div>
+                        <div class="partner-logo"><img src="{{ asset('assets/images/partners/bri-peduli.png') }}" alt="BRI Peduli"></div>
+                        <div class="partner-logo"><img src="{{ asset('assets/images/partners/kmtedi.jpg') }}" alt="KMTEDI"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-arrow" type="button" aria-label="Mitra berikutnya" data-partner-direction="next">›</button>
         </div>
     </div>
 </section>
@@ -48,9 +54,9 @@
         <p class="section-subtitle">Dokumentasi perjalanan, artikel edukatif, dan liputan berita komunitas.</p>
         <div class="card-grid three">
             @foreach ([
-                ['img'=>'publication-1.png','date'=>'Kamis, 20 Agustus 2026','title'=>'Semangat 20 Relawan Membina 2 Perpustakaan Desa di Wilayah Tambun Selatan','text'=>'Tambun Selatan – Memiliki visi bersama dalam memajukan literasi, 20 relawan Komunitas Literasi Remaja Tambun Selatan secara aktif mendampingi....'],
-                ['img'=>'publication-2.png','date'=>'Sabtu, 15 Agustus 2026','title'=>'Penyaluran Gerobak Angkasa: Menjangkau Pelosok Tambun Selatan dengan Buku','text'=>'Tambun Selatan – Dalam rangka memperluas akses membaca bagi anak-anak, Komunitas Literasi Remaja Tambun Selatan secara resmi mengoperasikan Gerobak Angkasa sebagai perpustakaan keliling....'],
-                ['img'=>'publication-3.png','date'=>'Selasa, 25 Agustus 2026','title'=>'Liputan Media Nasional: Gerakan Nyata Literasi Berdampak......','text'=>'Kabar Literasi – Gerakan membaca yang diinisiasi oleh Komunitas Literasi Remaja Tambun Selatan mendapat apresiasi dari pemerintah pendidikan nasional......'],
+                ['img'=>'publication-1.jpg','date'=>'Kamis, 20 Agustus 2026','title'=>'Semangat 20 Relawan Membina 2 Perpustakaan Desa di Wilayah Tambun Selatan','text'=>'Tambun Selatan – Memiliki visi bersama dalam memajukan literasi, 20 relawan Komunitas Literasi Remaja Tambun Selatan secara aktif mendampingi....'],
+                ['img'=>'publication-2.jpg','date'=>'Sabtu, 15 Agustus 2026','title'=>'Penyaluran Gerobak Angkasa: Menjangkau Pelosok Tambun Selatan dengan Buku','text'=>'Tambun Selatan – Dalam rangka memperluas akses membaca bagi anak-anak, Komunitas Literasi Remaja Tambun Selatan secara resmi mengoperasikan Gerobak Angkasa sebagai perpustakaan keliling....'],
+                ['img'=>'publication-3.jpg','date'=>'Selasa, 25 Agustus 2026','title'=>'Liputan Media Nasional: Gerakan Nyata Literasi Berdampak......','text'=>'Kabar Literasi – Gerakan membaca yang diinisiasi oleh Komunitas Literasi Remaja Tambun Selatan mendapat apresiasi dari pemerintah pendidikan nasional......'],
             ] as $item)
                 <article class="content-card publication-card">
                     <img src="{{ asset('assets/images/publications/'.$item['img']) }}" alt="">
@@ -72,10 +78,10 @@
         <p class="section-subtitle">Pilihan buku terbaru yang baru ditambahkan oleh komunitas.</p>
         <div class="card-grid four">
             @foreach ([
-                ['img'=>'book-1.png','title'=>'Negeri 5 Menara','author'=>'Ahmad Fuadi','type'=>'Novel'],
+                ['img'=>'book-1.jpg','title'=>'Negeri 5 Menara','author'=>'Ahmad Fuadi','type'=>'Novel'],
                 ['img'=>'book-2.png','title'=>'Educated','author'=>'Tara Westover','type'=>'Memoar'],
                 ['img'=>'book-3.png','title'=>'Quarter-Life Crisis','author'=>'Maudy Ayunda','type'=>'Pengembangan Diri'],
-                ['img'=>'book-4.png','title'=>'Quarter-Life Crisis','author'=>'Maudy Ayunda','type'=>'Pengembangan Diri'],
+                ['img'=>'book-3.png','title'=>'Quarter-Life Crisis','author'=>'Maudy Ayunda','type'=>'Pengembangan Diri'],
             ] as $book)
                 <article class="book-card">
                     <img src="{{ asset('assets/images/books/'.$book['img']) }}" alt="">
